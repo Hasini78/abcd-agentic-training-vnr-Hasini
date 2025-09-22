@@ -1,0 +1,72 @@
+{
+  "name": "scehedule remainder",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "ac676a19-1df5-4117-9d73-0ec01c0aecb5",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "sendTo": "hasiniboddapadu78@gmail.com",
+        "subject": "smtg to say",
+        "message": "there is some work check in the trigger",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        208,
+        0
+      ],
+      "id": "4a65703c-484e-40ef-aecd-c6825082bc26",
+      "name": "Send a message",
+      "webhookId": "ff516756-84fd-40b9-b6d5-e05bd5c856f1",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "N3meMSIEHDHSSsml",
+          "name": "Gmail account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "5f7e9e1a-e9c5-4a91-89d6-19560a0635d0",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "f6e00ad18283158891b0af8c8798da4808135b72f4a139aacfeb1af519cd26f5"
+  },
+  "id": "PZlPggaS31NXnO2y",
+  "tags": []
+}
